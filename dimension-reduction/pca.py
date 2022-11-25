@@ -28,4 +28,3 @@ x = np.random.rand(m, n)  # 随机生成0-1间m*n的矩阵，并作为新的输�
 newx = pca.transform(x)
 print(x, newx, pca_ratio)
 
-# https://blog.csdn.net/weixin_40637477/article/details/124609872
