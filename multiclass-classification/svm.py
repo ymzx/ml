@@ -21,8 +21,8 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.3)
 
 # 归一化
 sc = StandardScaler()
-X_train = sc.fit_transform(x_train)
-X_test = sc.transform(x_test)
+x_train = sc.fit_transform(x_train)
+x_test = sc.transform(x_test)
 
 # svm
 model = svm.SVC(kernel="linear", decision_function_shape="ovo", random_state=42)  # 核函数， "linear", "poly", "rbf", "sigmoid"

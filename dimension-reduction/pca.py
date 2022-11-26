@@ -26,5 +26,5 @@ nrow, ncol = norm_X.shape  # 行与列
 m, n = 1, ncol
 x = np.random.rand(m, n)  # 随机生成0-1间m*n的矩阵，并作为新的输入x
 newx = pca.transform(x)
-print(x, newx, pca_ratio)
+print(x, newx)
 

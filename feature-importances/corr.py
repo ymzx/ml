@@ -18,10 +18,10 @@ scaler = MinMaxScaler()  # 实例化
 norm_X = scaler.fit_transform(X)  # 得到归一化后的X
 
 df[X_name] = norm_X
-df_coor = df.corr()
+df_coor = df.corr(method='pearson')
 fig, ax = plt.subplots(figsize=(16, 12), facecolor='w')
 # 指定颜色带的色系
-sns.heatmap(df.corr(), annot=True, vmin=-1, vmax=1, square=True, cmap="rainbow", fmt='.2f', annot_kws={'size': 4})  # annot=True显示相关性大小
+sns.heatmap(df_coor, annot=True, vmin=-1, vmax=1, square=True, cmap="rainbow", fmt='.2f', annot_kws={'size': 4})  # annot=True显示相关性大小
 # plt.title('相关性热力图')
 plt.show()
-fig.savefig('output/corr.png', bbox_inches='tight', transparent=False)
+fig.savefig('output/corr.png', transparent=False)

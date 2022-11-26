@@ -1,7 +1,6 @@
 from sklearn import svm
 from sklearn import datasets
 import joblib
-import pickle
 clf = svm.SVC()
 iris = datasets.load_iris()
 X, y = iris.data, iris.target

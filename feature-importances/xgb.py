@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from xgboost import XGBClassifier
+from xgboost import plot_importance
 import os
 
 # 项目根路径
@@ -21,4 +22,5 @@ print(xgb.feature_importances_)
 # plot
 plt.barh(range(len(xgb.feature_importances_)), xgb.feature_importances_)
 plt.yticks(range(len(xgb.feature_importances_)), X_name)
+plt.savefig('output/xgb_importances.png')
 plt.show()
